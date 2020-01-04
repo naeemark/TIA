@@ -1,5 +1,7 @@
 package com.zaeem.tia.features.login.presenter.impl;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 
 import com.zaeem.tia.app.presenter.impl.BasePresenterImpl;
@@ -30,6 +32,7 @@ public final class LoginPresenterImpl extends BasePresenterImpl<LoginView> imple
     @Override
     public void onLoginClicked(User user) {
 
+        Log.e(user.getClass().getCanonicalName(), user.toString() );
     }
 
     private void launchNextActivity() {

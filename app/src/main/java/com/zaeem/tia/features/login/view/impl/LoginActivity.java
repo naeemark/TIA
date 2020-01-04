@@ -3,9 +3,11 @@ package com.zaeem.tia.features.login.view.impl;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
+import android.widget.RadioGroup;
 
 import androidx.annotation.NonNull;
 
@@ -42,6 +44,9 @@ public final class LoginActivity extends BaseActivity<LoginPresenter, LoginView>
 
     @BindView(R.id.input_password)
     protected EditText passwordEditText;
+
+    @BindView(R.id.radioGroup_gender)
+    protected RadioGroup radioGroupGender;
 
 
     @Override
@@ -96,10 +101,10 @@ public final class LoginActivity extends BaseActivity<LoginPresenter, LoginView>
 
     @OnClick(R.id.wrapper_clickable_login)
     public void onLoginClicked(){
-
         if(isValidContactInfo()) {
             assert mPresenter != null;
-            mPresenter.onLoginClicked(getContact());
+            User user = getUser();
+            mPresenter.onLoginClicked(user);
         }
     }
 
@@ -127,11 +132,12 @@ public final class LoginActivity extends BaseActivity<LoginPresenter, LoginView>
         }
     }
 
-    private User getContact() {
+    private User getUser() {
 
         return new User(
                 usernameEditText.getText().toString(),
-                passwordEditText.getText().toString()
+                passwordEditText.getText().toString(),
+                (String) findViewById(radioGroupGender.getCheckedRadioButtonId()).getTag()
         );
     }
 }

@@ -17,4 +17,6 @@
     <string name="hint_username">User Name</string>
     <string name="hint_password">Password</string>
     <string name="app_name_full">Token Issuance Application</string>
+    <string name="label_male_token">Male Token</string>
+    <string name="label_female_token">Female Token</string>
 </resources>
