@@ -25,11 +25,12 @@ public final class SplashPresenterImpl extends BasePresenterImpl<SplashView> imp
         super.onStart(viewCreated);
 
         if (viewCreated) {
-            if (!mInteractor.isSplashDone()) {
-                doSplash();
-            } else {
-                launchNextActivity();
-            }
+            doSplash();
+//            if (!mInteractor.isSplashDone()) {
+//                doSplash();
+//            } else {
+//                launchNextActivity();
+//            }
         }
     }
 
@@ -58,7 +59,7 @@ public final class SplashPresenterImpl extends BasePresenterImpl<SplashView> imp
     public void launchNextActivity() {
         assert mView != null;
         mView.launchNextActivity();
-//        mView.finishActivity();
+        mView.finishActivity();
     }
 
     @Override

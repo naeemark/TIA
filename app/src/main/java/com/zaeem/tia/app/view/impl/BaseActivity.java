@@ -150,7 +150,7 @@ public abstract class BaseActivity<P extends BasePresenter<V>, V> extends AppCom
     private void setActionBar() {
         ActionBar actionBar = getSupportActionBar();
         if (actionBar != null) {
-            actionBar.setTitle(getString(R.string.app_name));
+            actionBar.setTitle(getString(R.string.app_name_full));
             actionBar.setDisplayUseLogoEnabled(true);
             actionBar.setDisplayShowHomeEnabled(true);
         }

@@ -7,4 +7,8 @@
     <color name="colorBackground">#EEEEEE</color>
 
     <color name="app_name_splash">#178552</color>
+
+    <color name="colorClickableTextBackground">#dadada</color>
+
+    <color name="white">@android:color/white</color>
 </resources>

@@ -14,14 +14,17 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
-    <activity
-        android:name=".features.splash.SplashActivity"
-        android:theme="@style/AppTheme.NoActionBar.Splash">
-        <intent-filter>
-            <action android:name="android.intent.action.MAIN" />
+        <activity
+            android:name=".features.splash.SplashActivity"
+            android:theme="@style/AppTheme.NoActionBar.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
 
-            <category android:name="android.intent.category.LAUNCHER" />
-        </intent-filter>
-    </activity>
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+            <activity
+                android:name=".features.login.view.impl.LoginActivity"
+                android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
     </application>
 </manifest>
