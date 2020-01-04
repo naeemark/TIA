@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="splash_logo_width">256dp</dimen>
+    <dimen name="splash_logo_height">256dp</dimen>
+
+    <dimen name="margin_padding_minimal">5dp</dimen>
+    <dimen name="margin_padding_average">10dp</dimen>
+    <dimen name="margin_padding_large">15dp</dimen>
+    <dimen name="margin_padding_max">20dp</dimen>
+    <dimen name="margin_padding_maxmax">30dp</dimen>
+
+    <dimen name="width_movie_poster">108dp</dimen>
+    <dimen name="height_movie_poster">162dp</dimen>
+    <dimen name="height_carousel">210dp</dimen>
+
+    <dimen name="height_poster_progress">36dp</dimen>
+    <dimen name="stroke_width_thin">1dp</dimen>
+    <dimen name="stroke_width">2dp</dimen>
+    <dimen name="card_corner_radius">3dp</dimen>
+
+    <!--Text Size-->
+    <dimen name="textSize">15sp</dimen>
+    <dimen name="titleTextSize">18sp</dimen>
+
+    <dimen name="height_image">180dp</dimen>
+
+    <dimen name="height_poster_dp">144dp</dimen>
+    <dimen name="width_poster_dp">96dp</dimen>
+    <dimen name="width_height_dp">64dp</dimen>
+    <dimen name="sep_line_width">2dp</dimen>
+    <dimen name="login_logo_width_height">144dp</dimen>
+
+    <dimen name="button_height">48dp</dimen>
+    <dimen name="pager_indicator_dimen">8dp</dimen>
+
+    <dimen name="movie_cell_image_width">160dp</dimen>
+    <dimen name="cell_margin">6dp</dimen>
+    <dimen name="card_margin_ver">3dp</dimen>
+    <dimen name="movie_cell_image_height">237dp</dimen>
+    <dimen name="padding_large">8dp</dimen>
+    <dimen name="padding_small">2dp</dimen>
+
+
+</resources>

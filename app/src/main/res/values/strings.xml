@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">TIA</string>
+
+    <!--Prompts-->
+    <string name="loading">Loading&#8230;</string>
+    <string name="loading_more">Loading more&#8230;</string>
+    <string name="loading_resources">Loading Resources&#8230;</string>
+
+    <!--Errors-->
+    <string name="error_no_network">No Network Available!</string>
+    <string name="error_no_items_found">No Items Found!</string>
+    <string name="error_loading_data">Error Loading Data!</string>
+    <string name="empty" />
+    <string name="token_issuance_application">TOKEN\nISSUANCE\nAPPLICATION</string>
 </resources>
