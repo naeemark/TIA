@@ -24,7 +24,7 @@
     <style name="Button">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">@dimen/button_height</item>
-        <item name="android:background">@drawable/selector_button_login</item>
+        <item name="android:background">@drawable/selector_button_green</item>
         <item name="android:paddingStart">@dimen/margin_padding_large</item>
         <item name="android:paddingEnd">@dimen/margin_padding_large</item>
         <item name="android:foreground">?android:selectableItemBackground</item>

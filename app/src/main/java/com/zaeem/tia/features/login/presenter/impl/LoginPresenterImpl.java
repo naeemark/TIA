@@ -33,6 +33,7 @@ public final class LoginPresenterImpl extends BasePresenterImpl<LoginView> imple
     public void onLoginClicked(User user) {
 
         Log.e(user.getClass().getCanonicalName(), user.toString() );
+        launchNextActivity();
     }
 
     private void launchNextActivity() {

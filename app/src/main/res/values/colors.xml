@@ -4,6 +4,10 @@
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
 
+
+    <color name="colorRed">#F52121</color>
+    <color name="colorRedDark">#A00606</color>
+
     <color name="colorBackground">#EEEEEE</color>
 
     <color name="app_name_splash">#178552</color>
@@ -11,4 +15,7 @@
     <color name="colorClickableTextBackground">#dadada</color>
 
     <color name="white">@android:color/white</color>
+
+    <color name="transparent">@android:color/transparent</color>
+    <color name="clicked_bg">#A8A5A5</color>
 </resources>

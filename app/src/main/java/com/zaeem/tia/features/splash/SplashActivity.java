@@ -9,6 +9,7 @@ import com.zaeem.tia.R;
 import com.zaeem.tia.app.injection.AppComponent;
 import com.zaeem.tia.app.presenter.loader.PresenterFactory;
 import com.zaeem.tia.app.view.impl.BaseActivity;
+import com.zaeem.tia.features.home.view.impl.HomeActivity;
 import com.zaeem.tia.features.login.view.impl.LoginActivity;
 
 import javax.inject.Inject;
@@ -50,7 +51,7 @@ public final class SplashActivity extends BaseActivity<SplashPresenter, SplashVi
 
     @Override
     public void launchNextActivity() {
-        Intent intent = new Intent(this, LoginActivity.class);
+        Intent intent = new Intent(this, HomeActivity.class);
         startActivity(intent);
     }
 

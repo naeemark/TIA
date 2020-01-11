@@ -3,7 +3,6 @@ package com.zaeem.tia.features.login.view.impl;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -16,6 +15,7 @@ import com.zaeem.tia.R;
 import com.zaeem.tia.app.injection.AppComponent;
 import com.zaeem.tia.app.presenter.loader.PresenterFactory;
 import com.zaeem.tia.app.view.impl.BaseActivity;
+import com.zaeem.tia.features.home.view.impl.HomeActivity;
 import com.zaeem.tia.features.login.injection.DaggerLoginViewComponent;
 import com.zaeem.tia.features.login.injection.LoginViewModule;
 import com.zaeem.tia.features.login.presenter.LoginPresenter;
@@ -74,8 +74,9 @@ public final class LoginActivity extends BaseActivity<LoginPresenter, LoginView>
         super.onViewReady(savedInstanceState, intent);
     }
 
-    @OnFocusChange(R.id.wrapper_clickable_login)
-    public void onFocusObtained(boolean hasFocus) {
+
+    @OnFocusChange(R.id.radio_male)
+    public void onRadioFocusObtained(boolean hasFocus) {
         if (hasFocus) {
             hideKeyboard();
         }
@@ -94,13 +95,14 @@ public final class LoginActivity extends BaseActivity<LoginPresenter, LoginView>
 
     @Override
     public void launchNextActivity() {
-//        Intent intent = new Intent(this, HomeActivity.class);
-//        startActivity(intent);
-//        finish();
+        Intent intent = new Intent(this, HomeActivity.class);
+        startActivity(intent);
+        finish();
     }
 
     @OnClick(R.id.wrapper_clickable_login)
     public void onLoginClicked(){
+        hideKeyboard();
         if(isValidContactInfo()) {
             assert mPresenter != null;
             User user = getUser();

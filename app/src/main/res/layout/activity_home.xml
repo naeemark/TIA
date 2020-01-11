@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".features.login.view.impl.LoginActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView_fields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <ImageButton
+                android:layout_gravity="center_horizontal"
+                android:layout_width="@dimen/login_logo_width_height"
+                android:scaleType="fitXY"
+                android:background="@drawable/selector_camera"
+                android:layout_height="@dimen/login_logo_width_height"
+                android:src="@drawable/icon_finder_camera"/>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_mobileNumber"
+                style="@style/TextInputLayout"
+                android:hint="@string/hint_mobile_number">
+
+                <EditText
+                    android:id="@+id/input_mobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/wrapper_clickable_issueToken"
+                style="@style/Button"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_padding_maxmax">
+
+                <TextView
+                    style="@style/ButtonText"
+                    android:text="@string/label_issue_token" />
+            </FrameLayout>
+
+            <FrameLayout
+                style="@style/Button"
+                android:layout_width="match_parent"
+                android:background="@drawable/selector_button_red"
+                android:layout_marginTop="@dimen/margin_padding_max">
+
+                <TextView
+                    style="@style/ButtonText"
+                    android:text="@string/label_reprint_token" />
+            </FrameLayout>
+
+            <FrameLayout
+                style="@style/Button"
+                android:layout_width="match_parent"
+                android:background="@drawable/selector_button_red"
+                android:layout_marginTop="@dimen/margin_padding_max">
+
+                <TextView
+                    style="@style/ButtonText"
+                    android:text="@string/label_issued_tokens" />
+            </FrameLayout>
+
+            <FrameLayout
+                style="@style/Button"
+                android:background="@drawable/selector_button_red"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_padding_max">
+
+                <TextView
+                    style="@style/ButtonText"
+                    android:text="@string/label_logout" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

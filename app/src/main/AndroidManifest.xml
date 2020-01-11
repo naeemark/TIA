@@ -23,8 +23,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-            <activity
-                android:name=".features.login.view.impl.LoginActivity"
-                android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".features.login.view.impl.LoginActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".features.home.view.impl.HomeActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
     </application>
 </manifest>
