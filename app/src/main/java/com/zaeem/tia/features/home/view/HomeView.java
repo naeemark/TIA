@@ -8,4 +8,6 @@ public interface HomeView {
     void hideKeyboard();
 
     void launchNextActivity();
+
+    void launchStatsActivity();
 }

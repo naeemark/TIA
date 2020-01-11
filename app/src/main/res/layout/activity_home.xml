@@ -63,6 +63,7 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/wrapper_clickable_issuedTokens"
                 style="@style/Button"
                 android:layout_width="match_parent"
                 android:background="@drawable/selector_button_red"

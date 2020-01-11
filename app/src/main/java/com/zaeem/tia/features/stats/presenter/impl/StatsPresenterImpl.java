@@ -1,25 +1,25 @@
-package com.zaeem.tia.features.home.presenter.impl;
+package com.zaeem.tia.features.stats.presenter.impl;
 
 import android.util.Log;
 
 import androidx.annotation.NonNull;
 
 import com.zaeem.tia.app.presenter.impl.BasePresenterImpl;
-import com.zaeem.tia.features.home.interactor.HomeInteractor;
-import com.zaeem.tia.features.home.presenter.HomePresenter;
-import com.zaeem.tia.features.home.view.HomeView;
+import com.zaeem.tia.features.stats.interactor.StatsInteractor;
+import com.zaeem.tia.features.stats.presenter.StatsPresenter;
+import com.zaeem.tia.features.stats.view.StatsView;
 
 import javax.inject.Inject;
 
-public final class HomePresenterImpl extends BasePresenterImpl<HomeView> implements HomePresenter {
+public final class StatsPresenterImpl extends BasePresenterImpl<StatsView> implements StatsPresenter {
     /**
      * The interactor
      */
     @NonNull
-    private final HomeInteractor mInteractor;
+    private final StatsInteractor mInteractor;
 
     @Inject
-    public HomePresenterImpl(@NonNull HomeInteractor interactor) {
+    public StatsPresenterImpl(@NonNull StatsInteractor interactor) {
         mInteractor = interactor;
     }
 
@@ -29,6 +29,10 @@ public final class HomePresenterImpl extends BasePresenterImpl<HomeView> impleme
     }
 
 
+    @Override
+    public void onBackClicked() {
+        goBack();
+    }
 
     @Override
     public void onIssueTokenClicked() {
@@ -43,12 +47,10 @@ public final class HomePresenterImpl extends BasePresenterImpl<HomeView> impleme
     @Override
     public void onIssuedTokensClicked() {
         Log.e(this.getClass().getCanonicalName(), "onIssuedTokensClicked" );
-        assert mView != null;
-        mView.launchStatsActivity();
     }
 
-    private void launchNextActivity() {
+    private void goBack() {
         assert mView != null;
-        mView.launchNextActivity();
+        mView.goBack();
     }
 }

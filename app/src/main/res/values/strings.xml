@@ -12,11 +12,13 @@
     <string name="error_loading_data">Error Loading Data!</string>
     <string name="empty" />
     <string name="token_issuance_application">TOKEN\nISSUANCE\nAPPLICATION</string>
+    <string name="total_issued_tokens">TOTAL ISSUED TOKENS</string>
     <string name="label_login">LOGIN</string>
     <string name="label_issue_token">ISSUE TOKEN</string>
     <string name="label_reprint_token">REPRINT TOKEN</string>
     <string name="label_issued_tokens">ISSUED TOKENS</string>
     <string name="label_logout">LOGOUT</string>
+    <string name="label_back">BACK</string>
 
     <string name="hint_username">User Name</string>
     <string name="hint_password">Password</string>

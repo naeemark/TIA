@@ -18,6 +18,7 @@ import com.zaeem.tia.features.home.injection.DaggerHomeViewComponent;
 import com.zaeem.tia.features.home.injection.HomeViewModule;
 import com.zaeem.tia.features.home.presenter.HomePresenter;
 import com.zaeem.tia.features.home.view.HomeView;
+import com.zaeem.tia.features.stats.view.impl.StatsActivity;
 import com.zaeem.tia.utils.AppUtils;
 
 import javax.inject.Inject;
@@ -83,18 +84,30 @@ public final class HomeActivity extends BaseActivity<HomePresenter, HomeView> im
 
     @Override
     public void launchNextActivity() {
-//        Intent intent = new Intent(this, HomeActivity.class);
+//        Intent intent = new Intent(this, StatsActivity.class);
 //        startActivity(intent);
 //        finish();
     }
 
+    @Override
+    public void launchStatsActivity() {
+        Intent intent = new Intent(this, StatsActivity.class);
+        startActivity(intent);
+    }
+
     @OnClick(R.id.wrapper_clickable_issueToken)
-    public void onLoginClicked() {
+    public void onIssueTokenClicked() {
         if (isValidContactInfo()) {
             assert mPresenter != null;
-
             mPresenter.onIssueTokenClicked();
         }
+    }
+
+
+    @OnClick(R.id.wrapper_clickable_issuedTokens)
+    public void onIssuedTokensClicked() {
+        assert mPresenter != null;
+        mPresenter.onIssuedTokensClicked();
     }
 
     private boolean isValidContactInfo() {
@@ -102,7 +115,7 @@ public final class HomeActivity extends BaseActivity<HomePresenter, HomeView> im
         setInputLayoutError(mobileNumberInputLayout, null);
 
 
-        if (!AppUtils.isValidName(mobileNumberEditText.getText())) {
+        if (!AppUtils.isValidMobileNumber(mobileNumberEditText.getText())) {
             setInputLayoutError(mobileNumberInputLayout, "Invalid Mobile Number!");
             return false;
         }

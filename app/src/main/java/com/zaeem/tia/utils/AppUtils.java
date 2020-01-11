@@ -1,5 +1,6 @@
 package com.zaeem.tia.utils;
 
+import android.text.Editable;
 import android.text.Html;
 import android.text.Spanned;
 import android.text.TextUtils;
@@ -35,11 +36,12 @@ public class AppUtils {
         return !TextUtils.isEmpty(target) && android.util.Patterns.EMAIL_ADDRESS.matcher(target).matches();
     }
 
-    public static boolean isValidPhone(CharSequence target) {
+    public static boolean isValidMobileNumber(CharSequence target) {
         return !TextUtils.isEmpty(target) && Patterns.PHONE.matcher(target).matches();
     }
 
     public static boolean isValidAddress(CharSequence target) {
         return target.length() > 0;
     }
+
 }
