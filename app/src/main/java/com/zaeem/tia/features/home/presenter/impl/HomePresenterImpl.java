@@ -36,8 +36,10 @@ public final class HomePresenterImpl extends BasePresenterImpl<HomeView> impleme
     }
 
     @Override
-    public void onReprintTokenClicked() {
-        Log.e(this.getClass().getCanonicalName(), "onReprintTokenClicked" );
+    public void onSearchTokenClicked() {
+        Log.e(this.getClass().getCanonicalName(), "onSearchTokenClicked" );
+        assert mView != null;
+        mView.launchSearchActivity();
     }
 
     @Override

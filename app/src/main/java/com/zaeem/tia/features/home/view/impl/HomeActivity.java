@@ -18,6 +18,7 @@ import com.zaeem.tia.features.home.injection.DaggerHomeViewComponent;
 import com.zaeem.tia.features.home.injection.HomeViewModule;
 import com.zaeem.tia.features.home.presenter.HomePresenter;
 import com.zaeem.tia.features.home.view.HomeView;
+import com.zaeem.tia.features.search.view.impl.SearchActivity;
 import com.zaeem.tia.features.stats.view.impl.StatsActivity;
 import com.zaeem.tia.utils.AppUtils;
 
@@ -95,6 +96,12 @@ public final class HomeActivity extends BaseActivity<HomePresenter, HomeView> im
         startActivity(intent);
     }
 
+    @Override
+    public void launchSearchActivity() {
+        Intent intent = new Intent(this, SearchActivity.class);
+        startActivity(intent);
+    }
+
     @OnClick(R.id.wrapper_clickable_issueToken)
     public void onIssueTokenClicked() {
         if (isValidContactInfo()) {
@@ -103,6 +110,11 @@ public final class HomeActivity extends BaseActivity<HomePresenter, HomeView> im
         }
     }
 
+    @OnClick(R.id.wrapper_clickable_searchToken)
+    public void onSearchTokenClicked() {
+        assert mPresenter != null;
+        mPresenter.onSearchTokenClicked();
+    }
 
     @OnClick(R.id.wrapper_clickable_issuedTokens)
     public void onIssuedTokensClicked() {
@@ -111,10 +123,7 @@ public final class HomeActivity extends BaseActivity<HomePresenter, HomeView> im
     }
 
     private boolean isValidContactInfo() {
-
         setInputLayoutError(mobileNumberInputLayout, null);
-
-
         if (!AppUtils.isValidMobileNumber(mobileNumberEditText.getText())) {
             setInputLayoutError(mobileNumberInputLayout, "Invalid Mobile Number!");
             return false;

@@ -32,5 +32,8 @@
         <activity
             android:name=".features.stats.view.impl.StatsActivity"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".features.search.view.impl.SearchActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
     </application>
 </manifest>

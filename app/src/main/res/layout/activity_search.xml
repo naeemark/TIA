@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorBackground"
+    android:focusableInTouchMode="true"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".features.login.view.impl.LoginActivity">
+
+    <ScrollView
+        android:id="@+id/scrollView_fields"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:fontFamily="sans-serif-black"
+                android:text="@string/search_for_token_reprint"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/colorRed"
+                android:textSize="36sp"
+                android:textStyle="bold" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup_gender"
+                android:layout_width="match_parent"
+                android:checkedButton="@id/radio_male"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/margin_padding_average"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <RadioButton
+                    android:id="@+id/radio_tokenNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_padding_minimal"
+                    android:fontFamily="sans-serif-medium"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:tag="Male"
+                    android:text="@string/label_token_number" />
+
+                <RadioButton
+                    android:id="@+id/radio_mobileNumber"
+                    android:buttonTint="@color/colorPrimaryDark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/margin_padding_minimal"
+                    android:fontFamily="sans-serif-medium"
+                    android:tag="Female"
+                    android:text="@string/label_mobile_number" />
+            </RadioGroup>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/input_layout_tokenOrMobileNumber"
+                style="@style/TextInputLayout"
+                android:hint="@string/hint_token_or_mobile_number">
+
+                <EditText
+                    android:id="@+id/input_tokenOrMobileNumber"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"/>
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <FrameLayout
+                android:id="@+id/wrapper_clickable_search"
+                style="@style/Button"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_padding_maxmaxmax">
+
+                <TextView
+                    style="@style/ButtonText"
+                    android:text="@string/label_search" />
+            </FrameLayout>
+
+            <FrameLayout
+                android:id="@+id/wrapper_clickable_back"
+                style="@style/Button"
+                android:background="@drawable/selector_button_red"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/margin_padding_max">
+
+                <TextView
+                    style="@style/ButtonText"
+                    android:text="@string/label_cancel" />
+            </FrameLayout>
+
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

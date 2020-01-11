@@ -52,6 +52,7 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/wrapper_clickable_searchToken"
                 style="@style/Button"
                 android:layout_width="match_parent"
                 android:background="@drawable/selector_button_red"
@@ -59,7 +60,7 @@
 
                 <TextView
                     style="@style/ButtonText"
-                    android:text="@string/label_reprint_token" />
+                    android:text="@string/label_search_token" />
             </FrameLayout>
 
             <FrameLayout

@@ -9,6 +9,7 @@
     <dimen name="margin_padding_large">15dp</dimen>
     <dimen name="margin_padding_max">20dp</dimen>
     <dimen name="margin_padding_maxmax">30dp</dimen>
+    <dimen name="margin_padding_maxmaxmax">60dp</dimen>
 
     <dimen name="width_movie_poster">108dp</dimen>
     <dimen name="height_movie_poster">162dp</dimen>

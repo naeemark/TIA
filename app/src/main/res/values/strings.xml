@@ -13,17 +13,24 @@
     <string name="empty" />
     <string name="token_issuance_application">TOKEN\nISSUANCE\nAPPLICATION</string>
     <string name="total_issued_tokens">TOTAL ISSUED TOKENS</string>
+    <string name="search_for_token_reprint">SEARCH FOR REPRINT TOKEN</string>
     <string name="label_login">LOGIN</string>
     <string name="label_issue_token">ISSUE TOKEN</string>
+    <string name="label_search">SEARCH</string>
     <string name="label_reprint_token">REPRINT TOKEN</string>
+    <string name="label_search_token">SEARCH TOKEN</string>
     <string name="label_issued_tokens">ISSUED TOKENS</string>
     <string name="label_logout">LOGOUT</string>
     <string name="label_back">BACK</string>
+    <string name="label_cancel">CANCEL</string>
 
     <string name="hint_username">User Name</string>
     <string name="hint_password">Password</string>
     <string name="hint_mobile_number">Mobile Number</string>
+    <string name="hint_token_or_mobile_number">Token or Mobile Number</string>
     <string name="app_name_full">Token Issuance Application</string>
     <string name="label_male_token">Male Token</string>
     <string name="label_female_token">Female Token</string>
+    <string name="label_token_number">BY TOKEN NUMBER</string>
+    <string name="label_mobile_number">BY MOBILE NUMBER</string>
 </resources>

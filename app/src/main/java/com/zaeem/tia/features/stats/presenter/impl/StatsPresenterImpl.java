@@ -41,7 +41,7 @@ public final class StatsPresenterImpl extends BasePresenterImpl<StatsView> imple
 
     @Override
     public void onReprintTokenClicked() {
-        Log.e(this.getClass().getCanonicalName(), "onReprintTokenClicked" );
+        Log.e(this.getClass().getCanonicalName(), "onSearchTokenClicked" );
     }
 
     @Override

@@ -8,6 +8,6 @@ import com.zaeem.tia.model.User;
 public interface HomePresenter extends BasePresenter<HomeView>{
 
     void onIssueTokenClicked();
-    void onReprintTokenClicked();
+    void onSearchTokenClicked();
     void onIssuedTokensClicked();
 }

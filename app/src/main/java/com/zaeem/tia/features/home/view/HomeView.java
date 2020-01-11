@@ -10,4 +10,6 @@ public interface HomeView {
     void launchNextActivity();
 
     void launchStatsActivity();
+
+    void launchSearchActivity();
 }
