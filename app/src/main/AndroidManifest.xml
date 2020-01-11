@@ -35,5 +35,8 @@
         <activity
             android:name=".features.search.view.impl.SearchActivity"
             android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
+        <activity
+            android:name=".features.result.view.impl.ResultActivity"
+            android:windowSoftInputMode="stateAlwaysHidden|adjustResize" />
     </application>
 </manifest>

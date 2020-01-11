@@ -14,6 +14,7 @@
     <string name="token_issuance_application">TOKEN\nISSUANCE\nAPPLICATION</string>
     <string name="total_issued_tokens">TOTAL ISSUED TOKENS</string>
     <string name="search_for_token_reprint">SEARCH FOR REPRINT TOKEN</string>
+    <string name="search_result">SEARCH RESULT</string>
     <string name="label_login">LOGIN</string>
     <string name="label_issue_token">ISSUE TOKEN</string>
     <string name="label_search">SEARCH</string>

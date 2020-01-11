@@ -12,4 +12,6 @@ public interface HomeView {
     void launchStatsActivity();
 
     void launchSearchActivity();
+
+    void logout();
 }

@@ -7,4 +7,5 @@ public interface SearchView {
 
     void hideKeyboard();
     void goBack();
+    void launchResultActivity();
 }

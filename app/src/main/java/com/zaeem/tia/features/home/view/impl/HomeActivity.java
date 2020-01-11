@@ -18,6 +18,7 @@ import com.zaeem.tia.features.home.injection.DaggerHomeViewComponent;
 import com.zaeem.tia.features.home.injection.HomeViewModule;
 import com.zaeem.tia.features.home.presenter.HomePresenter;
 import com.zaeem.tia.features.home.view.HomeView;
+import com.zaeem.tia.features.login.view.impl.LoginActivity;
 import com.zaeem.tia.features.search.view.impl.SearchActivity;
 import com.zaeem.tia.features.stats.view.impl.StatsActivity;
 import com.zaeem.tia.utils.AppUtils;
@@ -102,6 +103,13 @@ public final class HomeActivity extends BaseActivity<HomePresenter, HomeView> im
         startActivity(intent);
     }
 
+    @Override
+    public void logout() {
+        Intent intent = new Intent(this, LoginActivity.class);
+        startActivity(intent);
+        finish();
+    }
+
     @OnClick(R.id.wrapper_clickable_issueToken)
     public void onIssueTokenClicked() {
         if (isValidContactInfo()) {
@@ -120,6 +128,12 @@ public final class HomeActivity extends BaseActivity<HomePresenter, HomeView> im
     public void onIssuedTokensClicked() {
         assert mPresenter != null;
         mPresenter.onIssuedTokensClicked();
+    }
+
+    @OnClick(R.id.wrapper_clickable_logout)
+    public void onLogoutClicked() {
+        assert mPresenter != null;
+        mPresenter.onLogoutClicked();
     }
 
     private boolean isValidContactInfo() {

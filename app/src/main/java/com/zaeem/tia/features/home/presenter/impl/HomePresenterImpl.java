@@ -49,6 +49,13 @@ public final class HomePresenterImpl extends BasePresenterImpl<HomeView> impleme
         mView.launchStatsActivity();
     }
 
+    @Override
+    public void onLogoutClicked() {
+        Log.e(this.getClass().getCanonicalName(), "onIssuedTokensClicked" );
+        assert mView != null;
+        mView.logout();
+    }
+
     private void launchNextActivity() {
         assert mView != null;
         mView.launchNextActivity();

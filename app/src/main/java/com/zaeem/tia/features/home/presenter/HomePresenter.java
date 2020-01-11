@@ -10,4 +10,5 @@ public interface HomePresenter extends BasePresenter<HomeView>{
     void onIssueTokenClicked();
     void onSearchTokenClicked();
     void onIssuedTokensClicked();
+    void onLogoutClicked();
 }

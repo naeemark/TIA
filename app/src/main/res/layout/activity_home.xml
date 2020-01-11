@@ -76,6 +76,7 @@
             </FrameLayout>
 
             <FrameLayout
+                android:id="@+id/wrapper_clickable_logout"
                 style="@style/Button"
                 android:background="@drawable/selector_button_red"
                 android:layout_width="match_parent"

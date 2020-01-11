@@ -51,7 +51,7 @@ public final class SplashActivity extends BaseActivity<SplashPresenter, SplashVi
 
     @Override
     public void launchNextActivity() {
-        Intent intent = new Intent(this, HomeActivity.class);
+        Intent intent = new Intent(this, LoginActivity.class);
         startActivity(intent);
     }
 

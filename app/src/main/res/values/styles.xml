@@ -32,7 +32,7 @@
         <item name="android:focusable">true</item>
     </style>
 
-    <style name="ButtonText">
+    <style name="ButtonText" parent="Text">
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
@@ -45,6 +45,14 @@
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_marginBottom">@dimen/margin_padding_minimal</item>
+    </style>
+
+    <style name="Text">
+        <item name="android:textSize">@dimen/titleTextSize</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/black</item>
     </style>
 
 </resources>

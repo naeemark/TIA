@@ -31,6 +31,8 @@ public final class SearchPresenterImpl extends BasePresenterImpl<SearchView> imp
     @Override
     public void onSearchClicked() {
         Log.e(this.getClass().getCanonicalName(), "onSearchClicked" );
+        assert mView != null;
+        mView.launchResultActivity();
     }
 
     @Override

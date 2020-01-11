@@ -3,6 +3,7 @@ package com.zaeem.tia.features.search.view.impl;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
@@ -14,10 +15,12 @@ import com.zaeem.tia.R;
 import com.zaeem.tia.app.injection.AppComponent;
 import com.zaeem.tia.app.presenter.loader.PresenterFactory;
 import com.zaeem.tia.app.view.impl.BaseActivity;
+import com.zaeem.tia.features.result.view.impl.ResultActivity;
 import com.zaeem.tia.features.search.injection.DaggerSearchViewComponent;
 import com.zaeem.tia.features.search.injection.SearchViewModule;
 import com.zaeem.tia.features.search.presenter.SearchPresenter;
 import com.zaeem.tia.features.search.view.SearchView;
+import com.zaeem.tia.features.stats.view.impl.StatsActivity;
 
 import javax.inject.Inject;
 
@@ -80,15 +83,27 @@ public final class SearchActivity extends BaseActivity<SearchPresenter, SearchVi
         }
     }
 
+    @OnClick(R.id.wrapper_clickable_search)
+    public void onSearchClicked() {
+        assert mPresenter != null;
+        mPresenter.onSearchClicked();
+    }
+
     @OnClick(R.id.wrapper_clickable_back)
     public void onBackClicked() {
         assert mPresenter != null;
         mPresenter.onBackClicked();
     }
 
+    @Override
+    public void launchResultActivity() {
+        Intent intent = new Intent(this, ResultActivity.class);
+        startActivity(intent);
+    }
 
     @Override
     public void goBack() {
         finish();
     }
+
 }
